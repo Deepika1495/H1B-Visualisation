@@ -78,7 +78,6 @@ d3.csv("count_pie.csv", type, function(error, data) {
         .data(pie)
         .enter().append("path")
         .attr("fill", function(d, i) {
-            console.log(i);
             return color[i];
         })
         .attr("d", arc)
@@ -86,6 +85,7 @@ d3.csv("count_pie.csv", type, function(error, data) {
             this._current = d;
         }); // store the initial angles
     textbe(4);
+
     d3.selectAll("input")
         .on("change", change);
 
@@ -127,13 +127,14 @@ d3.csv("count_pie.csv", type, function(error, data) {
 
     function change() {
         var value = this.value;
-        clearTimeout(timeout);
+	clearTimeout(timeout);
         textinchart(value);
+      
         pie.value(function(d) {
             console.log("value", d[value]);
             return d[value];
-        }); 
-        console.log(pie);
+        });
+        var sum = d3.sum(data.map(function (d){ return d[value]}));
         path = path.data(pie); 
         path.transition().duration(750).attrTween("d", arcTween);
 	path
@@ -141,7 +142,7 @@ d3.csv("count_pie.csv", type, function(error, data) {
             div.style("left", d3.event.pageX+10+"px");
             div.style("top", d3.event.pageY-25+"px");
             div.style("display", "inline-block");
-            div.html((d.value));
+            div.html((d.data.label + "<br>" + (d.value/sum)*100) +"%");
         });
     	path
         .on("mouseout", function(d){
