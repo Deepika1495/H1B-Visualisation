@@ -34,7 +34,7 @@ var width = 960,
     height = 500,
     radius = Math.min(width, height) / 2;
 
-var color = d3.scale.category20();
+var color = ["#4fc837","#db3d3d","#ffdb4d","#ffa64d"];
 
 var pie = d3.layout.pie()
     .value(function(d) { return d.y16; })
@@ -49,6 +49,9 @@ var svg = d3.select("body").append("svg")
     .attr("height", height)
   .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+years = ["2016","2015","2014","2013","2012"];
+svg.append("g")
+	.attr("class", "labelName");
 
 d3.csv("count_pie.csv", type, function(error, data) {
   if (error) throw error;
@@ -56,11 +59,9 @@ d3.csv("count_pie.csv", type, function(error, data) {
   var path = svg.datum(data).selectAll("path")
       .data(pie)
     .enter().append("path")
-      .attr("fill", function(d, i) { return color(i); })
+      .attr("fill", function(d, i) {console.log(i); return color[i]; })
       .attr("d", arc)
       .each(function(d) { this._current = d; }); // store the initial angles
-
-  console.log(path);
   
   d3.selectAll("input")
       .on("change", change);
@@ -69,9 +70,29 @@ d3.csv("count_pie.csv", type, function(error, data) {
     d3.select("input[value=\"y15\"]").property("checked", true).each(change);
   }, 5000);
 
+function textinchart(value){
+	 if ( value == "y16"){
+	    textbe(0);change();}
+	 if ( value == "y15"){
+	    textbe(1);change();}
+	 if ( value == "y14"){
+	    textbe(2);change();}
+	 if( value == "y13"){
+	    textbe(3);change();}
+	 if( value == "y12"){
+	    textbe(4);change();}
+	}	    
+function textbe(d){
+	 svg.append("text")
+        .attr("text-anchor", "middle")
+        .style('font-size', '4em')
+        .attr('y', 20)
+        .text(years[d]);
+       }	
   function change() {
     var value = this.value;
     clearTimeout(timeout);
+    textinchart(value);
     pie.value(function(d) { console.log("value" ,d[value]); return d[value]; }); // change the value function
     console.log(pie);
     path = path.data(pie); // compute the new angles
