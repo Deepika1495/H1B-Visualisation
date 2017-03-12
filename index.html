@@ -18,7 +18,21 @@ form {
   right: 10px;
   top: 10px;
 }
-
+.toolTip {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
+}
 </style>
 <form>
   <label><input type="radio" name="dataset" value="y16"> 2016 </label>
@@ -50,9 +64,13 @@ var svg = d3.select("body").append("svg")
     .attr("height", height)
     .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
 var years = ["2016", "2015", "2014", "2013", "2012"];
+
 var yearval = ["y12","y13","y14","y15","y16"];
-    
+
+var div = d3.select("body").append("div").attr("class", "toolTip");
+
 d3.csv("count_pie.csv", type, function(error, data) {
     if (error) throw error;
     console.log(data);
@@ -117,7 +135,18 @@ d3.csv("count_pie.csv", type, function(error, data) {
         }); 
         console.log(pie);
         path = path.data(pie); 
-        path.transition().duration(750).attrTween("d", arcTween); 
+        path.transition().duration(750).attrTween("d", arcTween);
+	path
+        .on("mousemove", function(d){
+            div.style("left", d3.event.pageX+10+"px");
+            div.style("top", d3.event.pageY-25+"px");
+            div.style("display", "inline-block");
+            div.html((d.value));
+        });
+    	path
+        .on("mouseout", function(d){
+            div.style("display", "none");
+        });
     }
 });
 
