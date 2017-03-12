@@ -21,11 +21,11 @@ form {
 
 </style>
 <form>
-  <label><input type="radio" name="dataset" value="y16" checked > 2016 </label>
+  <label><input type="radio" name="dataset" value="y16"> 2016 </label>
   <label><input type="radio" name="dataset" value="y15"> 2015 </label>
   <label><input type="radio" name="dataset" value="y14"> 2014 </label>
   <label><input type="radio" name="dataset" value="y13"> 2013 </label>
-  <label><input type="radio" name="dataset" value="y12"> 2012 </label>
+  <label><input type="radio" name="dataset" value="y12" checked> 2012 </label>
 </form>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
@@ -53,7 +53,7 @@ var svg = d3.select("body").append("svg")
 var years = ["2016", "2015", "2014", "2013", "2012"];
 svg.append("g")
     .attr("class", "labelName");
-
+    
 d3.csv("count_pie.csv", type, function(error, data) {
     if (error) throw error;
     console.log(data);
@@ -68,7 +68,7 @@ d3.csv("count_pie.csv", type, function(error, data) {
         .each(function(d) {
             this._current = d;
         }); // store the initial angles
-
+    textbe(0);
     d3.selectAll("input")
         .on("change", change);
 
@@ -77,29 +77,26 @@ d3.csv("count_pie.csv", type, function(error, data) {
     }, 5000);
 
     function textinchart(value) {
+       
         if (value == "y16") {
             textbe(0);
-            change();
         }
         if (value == "y15") {
             textbe(1);
-            change();
         }
         if (value == "y14") {
             textbe(2);
-            change();
         }
         if (value == "y13") {
             textbe(3);
-            change();
         }
         if (value == "y12") {
             textbe(4);
-            change();
         }
     }
 
     function textbe(d) {
+        d3.select("text").remove();
         svg.append("text")
             .attr("text-anchor", "middle")
             .style('font-size', '4em')
@@ -114,7 +111,7 @@ d3.csv("count_pie.csv", type, function(error, data) {
         pie.value(function(d) {
             console.log("value", d[value]);
             return d[value];
-        }); // change the value function
+        }); 
         console.log(pie);
         path = path.data(pie); 
         path.transition().duration(750).attrTween("d", arcTween); 
