@@ -21,9 +21,11 @@ form {
 
 </style>
 <form>
-  <label><input type="radio" name="dataset" value="y1" checked > 2016 </label>
-  <label><input type="radio" name="dataset" value="y2"> 2015 </label>
-  <label><input type="radio" name="dataset" value="y3"> 2014 </label>
+  <label><input type="radio" name="dataset" value="y16" checked > 2016 </label>
+  <label><input type="radio" name="dataset" value="y15"> 2015 </label>
+  <label><input type="radio" name="dataset" value="y14"> 2014 </label>
+  <label><input type="radio" name="dataset" value="y13"> 2013 </label>
+  <label><input type="radio" name="dataset" value="y12"> 2012 </label>
 </form>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
@@ -35,7 +37,7 @@ var width = 960,
 var color = d3.scale.category20();
 
 var pie = d3.layout.pie()
-    .value(function(d) { return d.y1; })
+    .value(function(d) { return d.y16; })
     .sort(null);
 
 var arc = d3.svg.arc()
@@ -64,7 +66,7 @@ d3.csv("count_pie.csv", type, function(error, data) {
       .on("change", change);
 
   var timeout = setTimeout(function() {
-    d3.select("input[value=\"y2\"]").property("checked", true).each(change);
+    d3.select("input[value=\"y15\"]").property("checked", true).each(change);
   }, 5000);
 
   function change() {
@@ -79,9 +81,11 @@ d3.csv("count_pie.csv", type, function(error, data) {
 
 function type(d) {
   console.log("s",d)
-  d.y1 = +d.y1;
-  d.y2 = +d.y2;
-  d.y3 = +d.y3;
+  d.y16 = +d.y16;
+  d.y15 = +d.y15;
+  d.y14 = +d.y14;
+  d.y13 = +d.y13;
+  d.y12 = +d.y12
   return d;
 }
 
