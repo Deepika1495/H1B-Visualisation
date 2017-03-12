@@ -51,8 +51,7 @@ var svg = d3.select("body").append("svg")
     .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 var years = ["2016", "2015", "2014", "2013", "2012"];
-svg.append("g")
-    .attr("class", "labelName");
+var yearval = ["y12","y13","y14","y15","y16"];
     
 d3.csv("count_pie.csv", type, function(error, data) {
     if (error) throw error;
@@ -68,13 +67,17 @@ d3.csv("count_pie.csv", type, function(error, data) {
         .each(function(d) {
             this._current = d;
         }); // store the initial angles
-    textbe(0);
+    textbe(4);
     d3.selectAll("input")
         .on("change", change);
 
-    var timeout = setTimeout(function() {
-        d3.select("input[value=\"y15\"]").property("checked", true).each(change);
-    }, 5000);
+    var timeout = time(0);
+
+    function time(i){
+    	     setTimeout(function() {
+             d3.select("input[value="+yearval[i]+"]").property("checked", true).each(change);
+    	     time(i+1)}, 1000);
+	    } 
 
     function textinchart(value) {
        
