@@ -1,0 +1,384 @@
+{
+    "name": "states_tree", 
+    "children": [
+        {
+            "children": [
+                {
+            "order": "1", 
+                    "name": "AK", 
+                    "size": 92
+
+        }, 
+                {
+                    "order": "2", 
+                    "name": "HI", 
+                    "size": 297
+                }
+            ], 
+            "name": "col1", 
+            "order": "1"
+        }, 
+        {
+            "children": [
+                {
+                    "order": "1", 
+                    "name": "WA", 
+                    "size": 9518
+                }, 
+                {
+                    "order": "2", 
+                    "name": "OR", 
+                    "size": 1234
+                }, 
+                {
+                    "order": "3", 
+                    "name": "CA", 
+                    "size": 74591
+                }
+            ], 
+            "name": "col2", 
+            "order": "2"
+        }, 
+        {
+          "children": [
+        {
+              "name": "col3a",
+              "order": 1,
+          "children": [
+                    {
+                       "order": "1", 
+                       "name": "MT", 
+                       "size": 70
+                    }]
+        }, 
+            {
+                "name": "col3b",
+                "order": 2,
+                "children": [
+        {
+                    "order": "1", 
+                    "name": "ID", 
+                     "size": 355
+          
+                },
+        {
+                     "order": "2", 
+                      "name": "WY", 
+                      "size": 93
+  
+                }]
+        },
+        {
+              "name": "col3c",
+              "order": 3,
+          "children": [
+                {
+                    "order": "1", 
+                    "name": "NV", 
+                    "size": 619
+                }, 
+                {
+                    "order": "2", 
+                    "name": "UT", 
+                    "size": 1027
+                },
+        {
+                    "order": "3", 
+                    "name": "CO", 
+                    "size": 2678
+                }]
+        },
+        {
+              "name": "col3d",
+              "order": 4,
+          "children": [
+                {
+                    "order": "1", 
+                    "name": "AZ", 
+                    "size": 2891
+                }, 
+                {
+                  "order": "1", 
+                    "name": "NM", 
+                    "size": 612  
+                }]
+        }], 
+            "name": "col3", 
+            "order": "3"
+        }, 
+        {
+            "children": [
+                {
+                    "order": "1", 
+                    "name": "ND", 
+                    "size": 267
+         
+                }, 
+                {
+                    "order": "2", 
+                    "name": "SD", 
+                    "size": 145
+          
+                }, 
+                {
+                    "order": "3", 
+                    "name": "NE", 
+                    "size": 930
+                }, 
+                {
+                    "order": "4", 
+                    "name": "KS", 
+                    "size": 1549
+          
+                }, 
+                {
+                    "order": "5", 
+                    "name": "OK", 
+                    "size": 799  
+                }, 
+                {
+                    "order": "6", 
+                    "name": "TX", 
+                    "size": 65156  
+                }
+            ], 
+            "name": "col4", 
+            "order": "4"
+        }, 
+        {
+            "children": [
+                {
+                    "order": "1", 
+                    "name": "MN", 
+                    "size": 3408
+          
+                }, 
+                {
+                    "order": "2", 
+                    "name": "IA", 
+                    "size": 1513
+                          }, 
+                {
+                    "order": "3", 
+                    "name": "MO", 
+                    "size": 3534 
+                }, 
+                {
+                    "order": "4", 
+                    "name": "AR", 
+                    "size": 1485
+          
+                }, 
+                {
+                    "order": "5", 
+                    "name": "LA", 
+                    "size": 1612
+        }
+            ], 
+            "name": "col5", 
+            "order": "5"
+        }, 
+        {
+            "children": [
+              {"name": "col6a",
+           "order": 1,
+           "children": [
+         {
+                    "order": "1", 
+                    "name": "WI", 
+                    "size": 2743
+                 },
+         {
+                    "order": "2", 
+                    "name": "MI", 
+                    "size": 15203
+                 }]
+          },
+          {"name": "col6b",
+           "order": 2,
+           "children": [
+                {
+                    "order": "1", 
+                    "name": "IL", 
+                    "size": 25468
+                }, 
+                {
+                    "order": "2", 
+                    "name": "IN", 
+                    "size": 2524
+                }, 
+                {
+                    "order": "3", 
+                    "name": "OH", 
+                    "size": 6947
+                }]
+          },
+          {"name": "col6c",
+           "order": 3,
+           "children": [ 
+                 {
+                    "order": "1", 
+                    "name": "KY", 
+                    "size": 1594
+                 }]
+          },
+          {"name": "col6d",
+           "order": 4,
+           "children": [
+         {
+                    "order": "1", 
+                    "name": "TN", 
+                    "size": 3282
+                 }]
+          },
+          {"name": "col6e",
+           "order": 5,
+           "children": [
+                {
+                    "order": "1", 
+                    "name": "MS", 
+                    "size": 382
+                },
+        {
+                    "order": "2", 
+                    "name": "AL", 
+                    "size": 1086
+                }]
+          }
+            ], 
+            "name": "col6", 
+            "order": "6"
+        }, 
+        {
+          "children": [
+        {"name": "col7a",
+         "order": 1,
+         "children": [
+                {
+                    "order": "1", 
+                    "name": "VT", 
+                    "size": 528
+                },
+           {
+                    "order": "2", 
+                    "name": "NH", 
+                    "size": 1018
+               },
+           {
+                    "order": "3", 
+                    "name": "ME", 
+                    "size": 388
+               }]
+        },
+        {"name": "col7b",
+         "order": 2,
+         "children": [
+           {
+                    "order": "1", 
+                    "name": "MA", 
+                    "size": 15398
+               }]
+        },
+        {"name": "col7c",
+         "order": 3,
+         "children": [
+           {
+                    "order": "1", 
+                    "name": "CT", 
+                    "size": 4803
+                }, 
+                {
+                    "order": "2", 
+                    "name": "RI", 
+                    "size": 1048
+                }]
+        },
+        {"name": "col7d",
+         "order": 2,
+         "children": [
+           {
+                    "order": "1", 
+                    "name": "NY", 
+                    "size": 31238
+               }]
+        },
+        {"name": "col7e",
+         "order": 3,
+         "children": [
+            {
+                    "order": "1", 
+                    "name": "PA", 
+                    "size": 21112
+                },
+           {
+                    "order": "2", 
+                    "name": "NJ", 
+                    "size": 60796
+               }]
+        },
+        {"name": "col7f",
+         "order": 4,
+         "children": [
+           {
+                    "order": "1", 
+                    "name": "WV", 
+                    "size": 215
+               },
+           {
+                    "order": "2", 
+                    "name": "MD", 
+                    "size": 20136
+                },
+           {
+                    "order": "3", 
+                    "name": "DE", 
+                    "size": 1689
+               }]
+        }, 
+            {"name": "col7g",
+         "order": 5,
+         "children": [     
+                {
+                    "order": "1", 
+                    "name": "VA", 
+                    "size": 15459
+                }]
+        },
+        {"name": "col7g",
+         "order": 6,
+         "children": [
+           {
+                    "order": "1", 
+                    "name": "NC", 
+                    "size": 11358
+               }]
+        },
+        {"name": "col7h",
+         "order": 7,
+         "children": [
+           {
+                    "order": "1", 
+                    "name": "GA", 
+                    "size": 12030
+                },
+                {
+                    "order": "1", 
+                    "name": "SC", 
+                    "size": 810
+                }]
+        },
+        {"name": "col7i",
+         "order": 8,
+         "children": [
+            {
+                    "order": "17", 
+                    "name": "FL", 
+                    "size": 12395
+                }]
+        } 
+            ], 
+            "name": "col7", 
+            "order": "7"
+        }
+    ]
+}

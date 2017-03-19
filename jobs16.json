@@ -1,0 +1,57 @@
+[
+    {
+        "year": 2016,
+        "Computer other": 55114,
+        "Engineer": 19900,
+        "Computer Programmer": 87119,
+        "Software Developer": 110593,
+        "Computer System Analyst": 108997,
+        "Database Admin": 9000,
+        "Networks": 13564,
+        "IT": 8997
+    }
+    {
+        "year": 2015,
+        "Computer other": 50114,
+        "Engineer": 15900,
+        "Computer Programmer": 81119,
+        "Software Developer": 103593,
+        "Computer System Analyst": 107997,
+        "Database Admin": 7490,
+        "Networks": 10459,
+        "IT": 7997
+    }
+    {
+        "year": 2014,
+        "Computer other": 40114,
+        "Engineer": 13900,
+        "Computer Programmer": 75119,
+        "Software Developer": 98593,
+        "Computer System Analyst": 90997,
+        "Database Admin": 5490,
+        "Networks": 10459,
+        "IT": 6997
+    }
+    {
+        "year": 2013,
+        "Computer other": 42114,
+        "Engineer": 11900,
+        "Computer Programmer": 74119,
+        "Software Developer": 90593,
+        "Computer System Analyst": 87990,
+        "Database Admin": 6504,
+        "Networks": 8459,
+        "IT": 7423
+    }
+    {
+        "year": 2012,
+        "Computer other": 31114,
+        "Engineer": 9900,
+        "Computer Programmer": 65119,
+        "Software Developer": 80593,
+        "Computer System Analyst": 80990,
+        "Database Admin": 4504,
+        "Networks": 7459,
+        "IT": 6423
+    }
+]
