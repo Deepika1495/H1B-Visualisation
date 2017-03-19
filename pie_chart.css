@@ -35,3 +35,17 @@ text {
     padding: 5px;
     text-align: center;
 }
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+}
+
+path.domain {
+    stroke: none;
+}
+
+.y .tick line {
+    stroke: #ddd;
+}
