@@ -15,7 +15,7 @@ var values = d3.range(l_width);
 //	.interpolate(d3.interpolateRgb)
 //	.domain([0, (values.length - 1)/2, values.length - 1]);	
 
-var color = d3.scale.ordinal()
+var color2 = d3.scale.ordinal()
     .domain(["foo", "bar", "baz"])
     .range(["#eff3ff","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#084594"]);
 
@@ -74,7 +74,7 @@ function render(map){
     
     var value = function(d) { return d.size; }
     var that_tree = treemap.value(value).nodes(root).map(function(d) { return (d.dx * d.dy)/d.real_size; });
-    color2.domain([d3.min(that_tree), 1, d3.max(that_tree)]);	
+    //color2.domain([d3.min(that_tree), 1, d3.max(that_tree)]);	
     animate(treemap, node, value);
   });
 }
@@ -91,5 +91,5 @@ function position() {
     .style("top", function(d) { return d.y + "px"; })
     .style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
     .style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; })
-    .style("background",function(d) { return color(d.name);});
+    .style("background",function(d) { return color2(d.name);});
 }

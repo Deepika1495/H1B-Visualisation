@@ -2,7 +2,9 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
 }
-
+p {
+    font-family : "Helvetica Neue 45 Light", "Helvetica Neue", Helvetica, Arial;
+} 
 text {
   font: 10px sans-serif;
 }
