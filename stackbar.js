@@ -71,7 +71,7 @@ var data = [
 
 var parse = d3.time.format("%Y").parse;
 
-var dataset = d3.layout.stack()(["Computerother", "Engineer", "ComputerProgrammer", "SoftwareDeveloper", "ComputerSystemAnalyst", "DatabaseAdmin", "Networks", "IT"].map(function(fruit) {
+var dataset = d3.layout.stack()(["IT", "Networks", "DatabaseAdmin", "ComputerSystemAnalyst", "SoftwareDeveloper", "ComputerProgrammer", "Engineer", "Computerother"].map(function(fruit) {
   return data.map(function(d) {
     return {x: parse(d.year), y: +d[fruit]};
   });
@@ -149,12 +149,12 @@ legend.append("text")
   .style("text-anchor", "start")
   .text(function(d, i) { 
     switch (i) {
-      case 0: return "Computerother";
+      case 0: return "Computer Other";
       case 1: return "Engineer";
-      case 2: return "ComputerProgrammer";
-      case 3: return "SoftwareDeveloper";
-      case 4: return "ComputerSystem Analyst";
-      case 5: return "DatabaseAdmin";
+      case 2: return "Computer Programmer";
+      case 3: return "Software Developer";
+      case 4: return "Computer System Analyst";
+      case 5: return "Database Administrator";
       case 6: return "Networks";
       case 7: return "IT";
     }

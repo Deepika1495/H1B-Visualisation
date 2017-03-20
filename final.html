@@ -4,7 +4,9 @@
   <link rel="stylesheet" type="text/css" media="screen" href="pie_chart.css" />
 </head>
 <body>
-	<center><h1> H1-B visualisation </h1></center>
+	<center><h1> H1-B VISUALIZATION </h1></center>
+	<p>The H1B visa is an employment-based, non-immigrant visa category for temporary workers. For such a visa, an employer must offer a job and apply for your H1B visa petition with the US Immigration Department. This approved petition is a work permit which allows one to obtain a visa stamp and work in the U.S. for that employer. Visualiasation of distribution of this visa status is shown.<p>
+<p> How many H1B applications on an average get accepted in an year among the total application pool? <p> 
 <form id="pie">
     <label><input type="radio" name="dataset" value="y16"> 2016 </label>
     <label><input type="radio" name="dataset" value="y15"> 2015 </label>
@@ -14,8 +16,11 @@
     </form>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="pie_chart.js"></script>
-
+<center><script src="pie_chart.js"></script></center>
+<p> It's interesting to note that the number of H1Bs certified has been increasing rapidly every year <p>
+<br>
+<br>
+<p> With the increase in H1B visas being certified every year, where do majority of these jobs reside in the United States. The answer could very well be California, Silicon Valley being the obvious magnet to all the tech jobs. But visualising this data a treemap shows surprising results that the East Coast has more immigrants than the West! By selecting the year, it is prominent that California in the West Coast, Texas in Central USA and most of the East Coast are where most of the jobs are present in the past few years. 
 <form>
     <label><input type="radio" name="mode" value="year16" checked> 2016 </label>
     <label><input type="radio" name="mode" value="year15"> 2015 </label>
@@ -23,8 +28,12 @@
     <label><input type="radio" name="mode" value="year13"> 2013 </label>
     <label><input type="radio" name="mode" value="year12"> 2012 </label>
     </form>
+<script src="treemap.js"></script>
+<p> H1B's applicants come from diverse fields such as from school teachers to CEO's of big companies to lawyers and doctors. <p>
+<p>Specific to the CS fields, which role most commonly requires employees from foreign countries? <p>   
+<script src="stackbar.js"></script>
+
+<p>Software Developers and Computer Programmers were expected job titles, but a surprising job title that has remain prominent is Computer system Analyst. It is also noticable that Engineers, hardware and electrical engineers to be specific are much smaller in number in comparison to an induvidual computer related job.<p>  
 </body>
 
-<script src="treemap.js"></script>
-<script src="stackbar.js"></script>
 </html>
