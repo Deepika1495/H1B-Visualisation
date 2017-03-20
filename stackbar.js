@@ -33,27 +33,27 @@ var data = [
         Networks: "10459",
         IT: "7997"
     },
-    {
+   {
         year: "2014",
-        Computerother: "40114",
-        Engineer: "13900",
-        ComputerProgrammer: "75119",
-        SoftwareDeveloper: "98593",
-        ComputerSystemAnalyst: "90997",
-        DatabaseAdmin: "5490",
-        Networks: "10459",
-        IT: "6997"
+        Computerother: "36228",
+        Engineer: "13755",
+        ComputerProgrammer: "65027",
+        SoftwareDeveloper: "81721",
+        ComputerSystemAnalyst: "85080",
+        DatabaseAdmin: "6406",
+        Networks: "8008",
+        IT: "5517"
     },
     {
         year: "2013",
-        Computerother: "42114",
-        Engineer: "11900",
-        ComputerProgrammer: "74119",
-        SoftwareDeveloper: "90593",
-        ComputerSystemAnalyst: "87990",
-        DatabaseAdmin: "6504",
-        Networks: "8459",
-        IT: "7423"
+        Computerother: "27497",
+        Engineer: "12017",
+        ComputerProgrammer: "51220",
+        SoftwareDeveloper: "61667",
+        ComputerSystemAnalyst: "77415",
+        DatabaseAdmin: "4715",
+        Networks: "5958",
+        IT: "6802"
     },
     {
         year: "2012",

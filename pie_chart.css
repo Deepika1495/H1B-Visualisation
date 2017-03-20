@@ -1,10 +1,35 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
+  background-color :#EAECEE ;
 }
 p {
     font-family : "Helvetica Neue 45 Light", "Helvetica Neue", Helvetica, Arial;
-} 
+}
+.header {
+  background: black;
+  border-radius: 5px;
+  height: 100px;
+  opacity: 0.8;
+  width: 100%;
+}
+
+.title {
+    color: white;
+    opacity:0.6;
+  float: left;
+  margin: 30px 0px 0px 100px;
+}
+.banner1 {
+    background:#D5DBDB;
+  border-radius: 5px;
+  display: table-cell;
+  height: 90px;
+  margin-top: 20px;
+  opacity: 0.7;
+  width: 50%;
+}
+
 text {
   font: 10px sans-serif;
 }

@@ -40,7 +40,7 @@ var div = d3.select("body").append("div")
     .style("width", (width + margin.left + margin.right) + "px")
     .style("height", (height + margin.top + margin.bottom) + "px")
     .style("left", margin.left + "px")
-    .style("top", margin.top + "px");
+    .style("top", margin.top+ "px");
 
 var active_year;
 
@@ -91,5 +91,5 @@ function position() {
     .style("top", function(d) { return d.y + "px"; })
     .style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
     .style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; })
-    .style("background",function(d) { return color2(d.name);});
+    .style("background",function(d) { return color2((d.dx * d.dy)/d.real_size);});
 }
