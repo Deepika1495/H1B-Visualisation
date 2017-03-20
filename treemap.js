@@ -10,21 +10,25 @@ var l_height = margin.top - (margin.left*2);
 
 var values = d3.range(l_width);	
 
-var color2 = d3.scale.linear()
-    .range(["rgb(0,155,255)","rgb(150,150,150)","rgb(255,100,0)"])
-	.interpolate(d3.interpolateRgb)
-	.domain([0, (values.length - 1)/2, values.length - 1]);	
+//var color2 = d3.scale.linear()
+  //  .range(["rgb(0,155,255)","rgb(150,150,150)","rgb(255,100,0)"])
+//	.interpolate(d3.interpolateRgb)
+//	.domain([0, (values.length - 1)/2, values.length - 1]);	
 
-var x = d3.scale.ordinal()
-  .domain(values)
-  .rangeRoundBands([0, l_width]);
+var color = d3.scale.ordinal()
+    .domain(["foo", "bar", "baz"])
+    .range(["#eff3ff","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#084594"]);
+
+//var x = d3.scale.ordinal()
+  //.domain(values)
+  //.rangeRoundBands([0, l_width]);
   
 var svg1 = d3.select("body").append("svg")
     .attr("id","treemap");
 
 var g =svg1.append("g").attr("transform", function(d) { return "translate(" + margin.left + "," + margin.left + ")"; });  
 
-var tree_path = "year12.json";
+//var tree_path = "year12.json";
 //var tree_path2 = "year15.json";
 //var tree_path3 = "year14.json";
 //var tree_path4 = "year13.json";
@@ -87,5 +91,5 @@ function position() {
     .style("top", function(d) { return d.y + "px"; })
     .style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
     .style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; })
-    .style("background",function(d) { return color2((d.dx * d.dy)/d.real_size);});
+    .style("background",function(d) { return color(d.name);});
 }
