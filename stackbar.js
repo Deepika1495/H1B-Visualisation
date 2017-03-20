@@ -57,14 +57,14 @@ var data = [
     },
     {
         year: "2012",
-        Computerother: "31114",
-        Engineer: "9900",
-        ComputerProgrammer: "65119",
-        SoftwareDeveloper: "80593",
-        ComputerSystemAnalyst: "80990",
-        DatabaseAdmin: "4504",
-        Networks:" 7459",
-        IT: "6423"
+        Computerother: "20514",
+        Engineer: "11785",
+        ComputerProgrammer: "46571",
+        SoftwareDeveloper: "54405",
+        ComputerSystemAnalyst: "61448",
+        DatabaseAdmin: "4228",
+        Networks:" 5577",
+        IT: "6954"
     }
 ];
 
